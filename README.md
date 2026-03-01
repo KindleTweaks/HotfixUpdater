@@ -26,3 +26,4 @@ HotfixUpdater is a simple on-device Hotfix updater for Kindles, automating the p
 - Prior to submitting a bug report regarding the Scriptlet, try updating to the latest Hotfix manually to see if that fixes your issue.
 - Licensed according to `CC BY-NC-SA 4.0`
 - Credit to NiLuJe and MRPI contributors for KindleTool and inspiration
+- This tool also supports manually using an update.bin to up/downgrade! Simply place the Hotfix file in the `HotfixUpdater` folder in `documents`!
