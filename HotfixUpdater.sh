@@ -114,6 +114,20 @@ extract_and_run() {
     return 0
 }
 
+if [ -f "$BASE_DIR/$BIN_NAME" ]; then
+    mv "$BASE_DIR/$BIN_NAME" "$DOWNLOAD_BIN"
+    if ! extract_and_run; then
+        alert "HotfixUpdater - Attention" "Update installation failed!"
+        exit 1
+    fi
+
+    alert "HotfixUpdater - Info" "Running Hotfix..."
+    /bin/sh /var/local/kmc/hotfix/run_hotfix.sh >/dev/null 2>&1
+
+    alert "HotfixUpdater - Success" "Hotfix installed!"
+    rm -f "$DOWNLOAD_BIN" >/dev/null 2>&1
+    exit 0
+fi
 alert "HotfixUpdater - Info" "Checking hotfix version..."
 
 CURRENT_VERSION=$(grep '^HOTFIX_VERSION=' /var/local/kmc/hotfix/libhotfixutils | cut -d'=' -f2 | tr -d '"')
