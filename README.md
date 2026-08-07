@@ -1,5 +1,8 @@
 # HotfixUpdater
 
+> [!CAUTION]
+> This tool has been **archived** and is no longer recommended for regular use. If you are running a jailbreak on `hdnext`, then using this script could cause damage to your Kindle. A good rule of thumb is that if you did not have to separately install a Hotfix while jailbreaking, you should not use this script.
+
 > [!NOTE]
 > HotfixUpdater v1 Is Out!
 
